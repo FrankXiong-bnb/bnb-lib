@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{87815059-1C87-4CFD-9313-BE65BFF646E2}</ProjectGuid>
+    <RootNamespace>bnb_lib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\source\include\bnb_Algorithm.h" />
+    <ClInclude Include="..\..\..\source\include\bnb_BitShift.h" />
+    <ClInclude Include="..\..\..\source\include\bnb_Console.h" />
+    <ClInclude Include="..\..\..\source\include\bnb_Constant.h" />
+    <ClInclude Include="..\..\..\source\include\bnb_Data.h" />
+    <ClInclude Include="..\..\..\source\include\bnb_Encoder.h" />
+    <ClInclude Include="..\..\..\source\include\bnb_Folder.h" />
+    <ClInclude Include="..\..\..\source\include\bnb_IEEEE754.h" />
+    <ClInclude Include="..\..\..\source\include\bnb_Log.h" />
+    <ClInclude Include="..\..\..\source\include\bnb_Math.h" />
+    <ClInclude Include="..\..\..\source\include\bnb_Memory.h" />
+    <ClInclude Include="..\..\..\source\include\bnb_Random.h" />
+    <ClInclude Include="..\..\..\source\include\bnb_StrApi.h" />
+    <ClInclude Include="..\..\..\source\include\bnb_Tchar.h" />
+    <ClInclude Include="..\..\..\source\include\bnb_Tydef.h" />
+    <ClInclude Include="..\..\..\source\include\bnb_Utility.h" />
+    <ClInclude Include="..\..\..\source\standard\_alphabet_map.h" />
+    <ClInclude Include="..\..\..\source\standard\_base64.h" />
+    <ClInclude Include="..\..\..\source\standard\_bitshift.h" />
+    <ClInclude Include="..\..\..\source\standard\_constant.h" />
+    <ClInclude Include="..\..\..\source\standard\_data.h" />
+    <ClInclude Include="..\..\..\source\standard\_definition.h" />
+    <ClInclude Include="..\..\..\source\standard\_encoder_base.h" />
+    <ClInclude Include="..\..\..\source\standard\_encoder_key.h" />
+    <ClInclude Include="..\..\..\source\standard\_ieee_754.h" />
+    <ClInclude Include="..\..\..\source\standard\_math.h" />
+    <ClInclude Include="..\..\..\source\standard\_memory.h" />
+    <ClInclude Include="..\..\..\source\standard\_numeral.h" />
+    <ClInclude Include="..\..\..\source\standard\_path.h" />
+    <ClInclude Include="..\..\..\source\standard\_point.h" />
+    <ClInclude Include="..\..\..\source\standard\_rect.h" />
+    <ClInclude Include="..\..\..\source\standard\_repeat_buffer.h" />
+    <ClInclude Include="..\..\..\source\standard\_str_api.h" />
+    <ClInclude Include="..\..\..\source\standard\_tchar.h" />
+    <ClInclude Include="..\..\..\source\standard\_tydef.h" />
+    <ClInclude Include="..\..\..\source\standard\_variant.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\standard\_abs.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_arcsine.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_arctangent.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_exp.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_extract.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_frexp.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_gcd.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_hypot.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_intercept.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_ldexp.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_log.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_mod.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_power.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_setsign.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_sine.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_sqrt.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_tangent.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\source\standard\_memory.inl" />
+    <None Include="..\..\..\source\standard\_str_case.inl" />
+    <None Include="..\..\..\source\standard\_str_cmp.inl" />
+    <None Include="..\..\..\source\standard\_str_spn.inl" />
+    <None Include="..\..\..\source\standard\_tstr_cat.inl" />
+    <None Include="..\..\..\source\standard\_tstr_cpy.inl" />
+    <None Include="..\..\..\source\standard\_tstr_find.inl" />
+    <None Include="..\..\..\source\standard\_tstr_len.inl" />
+    <None Include="..\..\..\source\standard\_tstr_reverse.inl" />
+    <None Include="..\..\..\source\standard\_tstr_set.inl" />
+    <None Include="..\..\..\source\standard\_wstr_case.inl" />
+    <None Include="..\..\..\source\standard\_wstr_cmp.inl" />
+    <None Include="..\..\..\source\standard\_wstr_spn.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
