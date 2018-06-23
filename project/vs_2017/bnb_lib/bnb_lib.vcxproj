@@ -152,7 +152,6 @@
     <ClCompile Include="..\..\..\source\standard\_gcd.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\source\standard\_memory.inl" />
     <None Include="..\..\..\source\standard\_str_case.inl" />
     <None Include="..\..\..\source\standard\_str_cmp.inl" />
     <None Include="..\..\..\source\standard\_str_spn.inl" />

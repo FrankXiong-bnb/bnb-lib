@@ -121,9 +121,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\source\standard\_memory.inl">
-      <Filter>standard</Filter>
-    </None>
     <None Include="..\..\..\source\standard\_str_case.inl">
       <Filter>standard</Filter>
     </None>
