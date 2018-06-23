@@ -1,7 +1,8 @@
 #ifndef ____bnb_Variant_H_
 #define ____bnb_Variant_H_
 
-_bnb_space_in
+namespace bnb
+{
 
 enum _var_type
 {
@@ -54,6 +55,6 @@ class Variant : public _variant_value
 };
 
 
-_bnb_space_out
+}
 
 #endif

@@ -5,7 +5,8 @@
 #ifndef ____bnb_String_Api_H_
 #define ____bnb_String_Api_H_
 
-_bnb_space_in
+namespace bnb
+{
 
 /*
  *	str_lower, str_upper
@@ -363,7 +364,7 @@ _overload_version(2) wchar* __bnbcall wstr_reverse( _in_out wchar* _str, _in _si
 #undef _declare_inside_name
 #endif  // #ifndef _declare_inside_name
 
-_bnb_space_out
+}
 
 
 #endif

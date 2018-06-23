@@ -5,217 +5,172 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Headers">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    <Filter Include="template">
+      <UniqueIdentifier>{3aadb113-ae49-462a-b87d-8718888bebfd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Sources">
+    <Filter Include="encrypt">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="standard">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\source\include\bnb_Algorithm.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\include\bnb_BitShift.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\include\bnb_Console.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\include\bnb_Constant.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\include\bnb_Data.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\include\bnb_Encoder.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\include\bnb_Folder.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\include\bnb_IEEEE754.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\include\bnb_Log.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\include\bnb_Math.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\include\bnb_Memory.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\include\bnb_Random.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\include\bnb_StrApi.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\include\bnb_Tchar.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\include\bnb_Tydef.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\include\bnb_Utility.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\source\standard\_alphabet_map.h">
-      <Filter>Sources</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\standard\_base64.h">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\source\standard\_bitshift.h">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\source\standard\_constant.h">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\source\standard\_data.h">
-      <Filter>Sources</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\standard\_definition.h">
-      <Filter>Sources</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\standard\_encoder_base.h">
-      <Filter>Sources</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\standard\_encoder_key.h">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\source\standard\_ieee_754.h">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\source\standard\_math.h">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\source\standard\_memory.h">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\source\standard\_numeral.h">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\source\standard\_path.h">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\source\standard\_point.h">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\source\standard\_rect.h">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\source\standard\_repeat_buffer.h">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\source\standard\_str_api.h">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\source\standard\_tchar.h">
-      <Filter>Sources</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\standard\_tydef.h">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\source\standard\_variant.h">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\standard\_base64.h">
+      <Filter>encrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\standard\_encoder_base.h">
+      <Filter>encrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\standard\_encoder_key.h">
+      <Filter>encrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\template\_algorithm.h">
+      <Filter>template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\template\_array.h">
+      <Filter>template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\template\_iterator.h">
+      <Filter>template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\template\_list.h">
+      <Filter>template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\template\_map.h">
+      <Filter>template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\template\_pair.h">
+      <Filter>template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\template\_queue.h">
+      <Filter>template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\template\_set.h">
+      <Filter>template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\template\_smart_buf.h">
+      <Filter>template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\template\_stack.h">
+      <Filter>template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\template\_string.h">
+      <Filter>template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\template\_template.h">
+      <Filter>template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\template\_trait_char.h">
+      <Filter>template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\template\_tree.h">
+      <Filter>template</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\source\standard\_abs.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\source\standard\_arcsine.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\source\standard\_arctangent.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\source\standard\_exp.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\source\standard\_extract.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\source\standard\_frexp.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\source\standard\_gcd.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\source\standard\_hypot.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\source\standard\_intercept.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\source\standard\_ldexp.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\source\standard\_log.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\source\standard\_mod.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\source\standard\_power.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\source\standard\_setsign.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\source\standard\_sine.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\source\standard\_sqrt.cpp">
-      <Filter>Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\source\standard\_tangent.cpp">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\source\standard\_memory.inl">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </None>
     <None Include="..\..\..\source\standard\_str_case.inl">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </None>
     <None Include="..\..\..\source\standard\_str_cmp.inl">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </None>
     <None Include="..\..\..\source\standard\_str_spn.inl">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </None>
     <None Include="..\..\..\source\standard\_tstr_cat.inl">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </None>
     <None Include="..\..\..\source\standard\_tstr_cpy.inl">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </None>
     <None Include="..\..\..\source\standard\_tstr_find.inl">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </None>
     <None Include="..\..\..\source\standard\_tstr_len.inl">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </None>
     <None Include="..\..\..\source\standard\_tstr_reverse.inl">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </None>
     <None Include="..\..\..\source\standard\_tstr_set.inl">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </None>
     <None Include="..\..\..\source\standard\_wstr_case.inl">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </None>
     <None Include="..\..\..\source\standard\_wstr_cmp.inl">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
     </None>
     <None Include="..\..\..\source\standard\_wstr_spn.inl">
-      <Filter>Sources</Filter>
+      <Filter>standard</Filter>
+    </None>
+    <None Include="..\..\..\source\template\_find.inl">
+      <Filter>template</Filter>
+    </None>
+    <None Include="..\..\..\source\template\_permutation.inl">
+      <Filter>template</Filter>
+    </None>
+    <None Include="..\..\..\source\template\_replace.inl">
+      <Filter>template</Filter>
+    </None>
+    <None Include="..\..\..\source\template\_sort.inl">
+      <Filter>template</Filter>
     </None>
   </ItemGroup>
 </Project>

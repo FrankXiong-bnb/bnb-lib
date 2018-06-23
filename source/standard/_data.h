@@ -1,9 +1,8 @@
 #ifndef ____bnb_Data_H_
 #define ____bnb_Data_H_
 
-#include "../standard/_definition.h"
-
-_bnb_space_in
+namespace bnb
+{
 
 #define _min_int8           (-128i8)
 #define _min_int16          (-32768i16)
@@ -50,11 +49,11 @@ _bnb_space_in
 #define _max_text           0x00800000ui32
 #define _max_file           0x40000000ui32
 
-#define _size_file_name     0x40        // 文件名大小
+#define _size_file_name     0x80        // 文件名大小
 #define _size_string        0x80        // 字符串大小
 #define _size_path          0xff        // 路径名大小
 #define _size_buffer        0xff        // 缓冲区大小
-#define _size_word          0x20        // 单词长度
+#define _size_word          0x40        // 单词长度
 #define _size_std_time      0x0a        // 时间长度
 
 const unsigned int _size_char(sizeof(char));
@@ -67,6 +66,6 @@ const unsigned int _size_longlong(sizeof(long long));
 const unsigned int _size_longdouble(sizeof(long double));
 const unsigned int _size_ptr(sizeof(void*));
 
-_bnb_space_out
+}
 
 #endif

@@ -1,7 +1,8 @@
 #ifndef ____bnb_repeat_buffuer_h_
 #define ____bnb_repeat_buffuer_h_
 
-_bnb_space_in
+namespace bnb
+{
 
 class repeat_buf
 {
@@ -231,6 +232,6 @@ public:
 
 };  // class RepeatBuffer
 
-_bnb_space_out
+}
 
 #endif

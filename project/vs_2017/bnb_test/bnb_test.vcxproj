@@ -20,13 +20,13 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{87815059-1C87-4CFD-9313-BE65BFF646E2}</ProjectGuid>
-    <RootNamespace>bnb_lib</RootNamespace>
+    <ProjectGuid>{FCD5F6C0-0B65-4C49-9E1E-02475D91BA51}</ProjectGuid>
+    <RootNamespace>bnb_test</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
@@ -39,17 +39,17 @@
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -69,16 +69,12 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)..\..\Output\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)..\..\Output\Intermediary\</IntDir>
-  </PropertyGroup>
+  <PropertyGroup />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../../source/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -115,60 +111,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\source\standard\_alphabet_map.h" />
-    <ClInclude Include="..\..\..\source\standard\_base64.h" />
-    <ClInclude Include="..\..\..\source\standard\_bitshift.h" />
-    <ClInclude Include="..\..\..\source\standard\_constant.h" />
-    <ClInclude Include="..\..\..\source\standard\_data.h" />
-    <ClInclude Include="..\..\..\source\standard\_encoder_base.h" />
-    <ClInclude Include="..\..\..\source\standard\_encoder_key.h" />
-    <ClInclude Include="..\..\..\source\standard\_ieee_754.h" />
-    <ClInclude Include="..\..\..\source\standard\_math.h" />
-    <ClInclude Include="..\..\..\source\standard\_memory.h" />
-    <ClInclude Include="..\..\..\source\standard\_numeral.h" />
-    <ClInclude Include="..\..\..\source\standard\_path.h" />
-    <ClInclude Include="..\..\..\source\standard\_point.h" />
-    <ClInclude Include="..\..\..\source\standard\_rect.h" />
-    <ClInclude Include="..\..\..\source\standard\_repeat_buffer.h" />
-    <ClInclude Include="..\..\..\source\standard\_str_api.h" />
-    <ClInclude Include="..\..\..\source\standard\_tchar.h" />
-    <ClInclude Include="..\..\..\source\standard\_variant.h" />
-    <ClInclude Include="..\..\..\source\template\_algorithm.h" />
-    <ClInclude Include="..\..\..\source\template\_array.h" />
-    <ClInclude Include="..\..\..\source\template\_iterator.h" />
-    <ClInclude Include="..\..\..\source\template\_list.h" />
-    <ClInclude Include="..\..\..\source\template\_map.h" />
-    <ClInclude Include="..\..\..\source\template\_pair.h" />
-    <ClInclude Include="..\..\..\source\template\_queue.h" />
-    <ClInclude Include="..\..\..\source\template\_set.h" />
-    <ClInclude Include="..\..\..\source\template\_smart_buf.h" />
-    <ClInclude Include="..\..\..\source\template\_stack.h" />
-    <ClInclude Include="..\..\..\source\template\_string.h" />
-    <ClInclude Include="..\..\..\source\template\_template.h" />
-    <ClInclude Include="..\..\..\source\template\_trait_char.h" />
-    <ClInclude Include="..\..\..\source\template\_tree.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\source\standard\_gcd.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\source\standard\_memory.inl" />
-    <None Include="..\..\..\source\standard\_str_case.inl" />
-    <None Include="..\..\..\source\standard\_str_cmp.inl" />
-    <None Include="..\..\..\source\standard\_str_spn.inl" />
-    <None Include="..\..\..\source\standard\_tstr_cat.inl" />
-    <None Include="..\..\..\source\standard\_tstr_cpy.inl" />
-    <None Include="..\..\..\source\standard\_tstr_find.inl" />
-    <None Include="..\..\..\source\standard\_tstr_len.inl" />
-    <None Include="..\..\..\source\standard\_tstr_reverse.inl" />
-    <None Include="..\..\..\source\standard\_tstr_set.inl" />
-    <None Include="..\..\..\source\standard\_wstr_case.inl" />
-    <None Include="..\..\..\source\standard\_wstr_cmp.inl" />
-    <None Include="..\..\..\source\standard\_wstr_spn.inl" />
-    <None Include="..\..\..\source\template\_find.inl" />
-    <None Include="..\..\..\source\template\_permutation.inl" />
-    <None Include="..\..\..\source\template\_replace.inl" />
-    <None Include="..\..\..\source\template\_sort.inl" />
+    <ClCompile Include="TestMain.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,9 +1,8 @@
 #ifndef ____bnb_Constant_H_
 #define ____bnb_Constant_H_
 
-#include "../standard/_definition.h"
-
-_bnb_space_in
+namespace bnb
+{
 
 const double _e_(2.71828182845904523536);           // e
 const double _pi(3.14159265358979323846);           // pi
@@ -33,6 +32,6 @@ const double _sqrt2(1.41421356237309504880);        // sqrt(2)
 const double _sqrt2_2(0.707106781186547524401);     // sqrt(2)/2
 const double _sqrt3(1.73205080756887729352);        // sqrt(3)
 
-_bnb_space_out
+}
 
 #endif

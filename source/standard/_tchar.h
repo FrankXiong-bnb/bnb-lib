@@ -5,7 +5,8 @@
 #define _bnb_unicode
 #endif
 
-_bnb_space_in
+namespace bnb
+{
 
 #ifdef _bnb_unicode
 
@@ -47,6 +48,6 @@ _bnb_space_in
 
 #endif  // #ifdef UNICODE
 
-    _bnb_space_out
+}
 
 #endif
