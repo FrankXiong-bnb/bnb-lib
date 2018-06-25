@@ -13,13 +13,25 @@ namespace bnb
         _big_endian,
         _little_endian
     };
-    /*
+/*
 #ifndef _ieee_big_endian
 #define _ieee_endian _little_endian
 #else
 #define _ieee_endian _big_endian
 #endif  // #ifndef _ieee_big_endian
-    */
+*/
+
+    constexpr _endian_type _check_endian()
+    {
+        const union {
+            unsigned short _value;
+            unsigned char _endian;
+        }
+        _test_endian = { _little_endian | _big_endian };
+
+        return static_cast<_endian_type>(_test_endian._endian);
+    }
+
     const _endian_type _ieee_big_endian = _check_endian();
 
 #if _ieee_big_endian == _little_endian
@@ -233,7 +245,7 @@ _isf._value = (_f);                         \
 
         _get_digit_from_double(_i, _digit)
 
-            _exp = (_i & 0x7ff0000000000000) >> _double_man_len;
+        _exp = (_i & 0x7ff0000000000000) >> _double_man_len;
 
         if (!!!_exp)
             if (!!!(_i & 0xfffffffffffff))
@@ -256,7 +268,7 @@ _isf._value = (_f);                         \
 
         _get_digit_from_float(_i, _digit)
 
-            _exp = (_i & 0x7f800000) >> _float_man_len;
+        _exp = (_i & 0x7f800000) >> _float_man_len;
 
         if (!!!_exp)
             if (!!!(_i & 0x7fffff))
@@ -279,10 +291,10 @@ _isf._value = (_f);                         \
 
         _get_double_bit_h(_h, _digit)
 
-            if (_h & 0x80000000)
-                return (_ns_negative);
-            else
-                return (_ns_positive);
+        if (_h & 0x80000000)
+            return (_ns_negative);
+        else
+            return (_ns_positive);
     }
 
     inline _numeral_sign _check_numeral_sign(const float& _digit)
@@ -291,21 +303,10 @@ _isf._value = (_f);                         \
 
         _get_float_bit_h(_h, _digit)
 
-            if (_h & 0x8000)
-                return (_ns_negative);
-            else
-                return (_ns_positive);
-    }
-
-    constexpr _endian_type _check_endian()
-    {
-        const union {
-            unsigned short _value;
-            unsigned char _endian;
-        }
-        _test_endian = { _little_endian | _big_endian };
-
-        return static_cast<_endian_type>(_test_endian._endian);
+        if (_h & 0x8000)
+            return (_ns_negative);
+        else
+            return (_ns_positive);
     }
 
 }

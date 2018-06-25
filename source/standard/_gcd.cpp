@@ -1,7 +1,7 @@
 namespace bnb
 {
 
-    unsigned int gcd(unsigned int _a, unsigned int _b)
+    inline unsigned int gcd(unsigned int _a, unsigned int _b)
     {
         if (!!!(_a || _b))
             return (0);
@@ -17,14 +17,6 @@ namespace bnb
         }
 
         return _b;
-    }
-
-    unsigned int lcm(unsigned int _a, unsigned int _b)
-    {
-        if (!!!(_a || _b))
-            return (0);
-
-        return (_a * _b / gcd(_a, _b));
     }
 
 }

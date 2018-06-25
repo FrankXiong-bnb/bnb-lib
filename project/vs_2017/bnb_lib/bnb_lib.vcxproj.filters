@@ -16,6 +16,9 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
+    <Filter Include="utility">
+      <UniqueIdentifier>{b283c527-4122-4124-8d31-e9a7a031232c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\source\standard\_alphabet_map.h">
@@ -37,24 +40,6 @@
       <Filter>standard</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\source\standard\_memory.h">
-      <Filter>standard</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\standard\_numeral.h">
-      <Filter>standard</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\standard\_path.h">
-      <Filter>standard</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\standard\_point.h">
-      <Filter>standard</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\standard\_rect.h">
-      <Filter>standard</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\standard\_repeat_buffer.h">
-      <Filter>standard</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\standard\_str_api.h">
       <Filter>standard</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\source\standard\_tchar.h">
@@ -114,22 +99,82 @@
     <ClInclude Include="..\..\..\source\template\_tree.h">
       <Filter>template</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\source\standard\_string.h">
+      <Filter>standard</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\standard\_repeat_buffer.h">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\standard\_point.h">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\standard\_path.h">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\standard\_rectangle.h">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\standard\_numeral.h">
+      <Filter>utility</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\standard\_gcd.cpp">
       <Filter>standard</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\source\standard\_abs.cpp">
+      <Filter>standard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\standard\_memory.cpp">
+      <Filter>standard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\standard\_arcsine.cpp">
+      <Filter>standard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\standard\_arctangent.cpp">
+      <Filter>standard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\standard\_exp.cpp">
+      <Filter>standard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\standard\_extract.cpp">
+      <Filter>standard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\standard\_frexp.cpp">
+      <Filter>standard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\standard\_hypot.cpp">
+      <Filter>standard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\standard\_intercept.cpp">
+      <Filter>standard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\standard\_ldexp.cpp">
+      <Filter>standard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\standard\_log.cpp">
+      <Filter>standard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\standard\_mod.cpp">
+      <Filter>standard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\standard\_power.cpp">
+      <Filter>standard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\standard\_setsign.cpp">
+      <Filter>standard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\standard\_sine.cpp">
+      <Filter>standard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\standard\_sqrt.cpp">
+      <Filter>standard</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\standard\_tangent.cpp">
+      <Filter>standard</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\source\standard\_str_case.inl">
-      <Filter>standard</Filter>
-    </None>
-    <None Include="..\..\..\source\standard\_str_cmp.inl">
-      <Filter>standard</Filter>
-    </None>
-    <None Include="..\..\..\source\standard\_str_spn.inl">
-      <Filter>standard</Filter>
-    </None>
     <None Include="..\..\..\source\standard\_tstr_cat.inl">
       <Filter>standard</Filter>
     </None>
@@ -148,15 +193,6 @@
     <None Include="..\..\..\source\standard\_tstr_set.inl">
       <Filter>standard</Filter>
     </None>
-    <None Include="..\..\..\source\standard\_wstr_case.inl">
-      <Filter>standard</Filter>
-    </None>
-    <None Include="..\..\..\source\standard\_wstr_cmp.inl">
-      <Filter>standard</Filter>
-    </None>
-    <None Include="..\..\..\source\standard\_wstr_spn.inl">
-      <Filter>standard</Filter>
-    </None>
     <None Include="..\..\..\source\template\_find.inl">
       <Filter>template</Filter>
     </None>
@@ -168,6 +204,24 @@
     </None>
     <None Include="..\..\..\source\template\_sort.inl">
       <Filter>template</Filter>
+    </None>
+    <None Include="..\..\..\source\standard\_str_case.cpp">
+      <Filter>standard</Filter>
+    </None>
+    <None Include="..\..\..\source\standard\_str_cmp.cpp">
+      <Filter>standard</Filter>
+    </None>
+    <None Include="..\..\..\source\standard\_str_spn.cpp">
+      <Filter>standard</Filter>
+    </None>
+    <None Include="..\..\..\source\standard\_wstr_case.cpp">
+      <Filter>standard</Filter>
+    </None>
+    <None Include="..\..\..\source\standard\_wstr_cmp.cpp">
+      <Filter>standard</Filter>
+    </None>
+    <None Include="..\..\..\source\standard\_wstr_spn.cpp">
+      <Filter>standard</Filter>
     </None>
   </ItemGroup>
 </Project>

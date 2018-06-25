@@ -32,7 +32,7 @@
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -73,12 +73,18 @@
     <OutDir>$(SolutionDir)..\..\Output\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)..\..\Output\Intermediary\</IntDir>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)..\..\Output\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\..\Output\Intermediary\</IntDir>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>../../../source/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_bnb_static_lib;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -128,9 +134,9 @@
     <ClInclude Include="..\..\..\source\standard\_numeral.h" />
     <ClInclude Include="..\..\..\source\standard\_path.h" />
     <ClInclude Include="..\..\..\source\standard\_point.h" />
-    <ClInclude Include="..\..\..\source\standard\_rect.h" />
+    <ClInclude Include="..\..\..\source\standard\_rectangle.h" />
     <ClInclude Include="..\..\..\source\standard\_repeat_buffer.h" />
-    <ClInclude Include="..\..\..\source\standard\_str_api.h" />
+    <ClInclude Include="..\..\..\source\standard\_string.h" />
     <ClInclude Include="..\..\..\source\standard\_tchar.h" />
     <ClInclude Include="..\..\..\source\standard\_variant.h" />
     <ClInclude Include="..\..\..\source\template\_algorithm.h" />
@@ -149,21 +155,38 @@
     <ClInclude Include="..\..\..\source\template\_tree.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\source\standard\_abs.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_arcsine.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_arctangent.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_exp.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_extract.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_frexp.cpp" />
     <ClCompile Include="..\..\..\source\standard\_gcd.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_hypot.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_intercept.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_ldexp.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_log.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_memory.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_mod.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_power.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_setsign.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_sine.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_sqrt.cpp" />
+    <ClCompile Include="..\..\..\source\standard\_tangent.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\source\standard\_str_case.inl" />
-    <None Include="..\..\..\source\standard\_str_cmp.inl" />
-    <None Include="..\..\..\source\standard\_str_spn.inl" />
+    <None Include="..\..\..\source\standard\_str_case.cpp" />
+    <None Include="..\..\..\source\standard\_str_cmp.cpp" />
+    <None Include="..\..\..\source\standard\_str_spn.cpp" />
     <None Include="..\..\..\source\standard\_tstr_cat.inl" />
     <None Include="..\..\..\source\standard\_tstr_cpy.inl" />
     <None Include="..\..\..\source\standard\_tstr_find.inl" />
     <None Include="..\..\..\source\standard\_tstr_len.inl" />
     <None Include="..\..\..\source\standard\_tstr_reverse.inl" />
     <None Include="..\..\..\source\standard\_tstr_set.inl" />
-    <None Include="..\..\..\source\standard\_wstr_case.inl" />
-    <None Include="..\..\..\source\standard\_wstr_cmp.inl" />
-    <None Include="..\..\..\source\standard\_wstr_spn.inl" />
+    <None Include="..\..\..\source\standard\_wstr_case.cpp" />
+    <None Include="..\..\..\source\standard\_wstr_cmp.cpp" />
+    <None Include="..\..\..\source\standard\_wstr_spn.cpp" />
     <None Include="..\..\..\source\template\_find.inl" />
     <None Include="..\..\..\source\template\_permutation.inl" />
     <None Include="..\..\..\source\template\_replace.inl" />

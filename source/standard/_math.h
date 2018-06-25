@@ -6,11 +6,10 @@
 #ifndef ____bnb_Math_H_
 #define ____bnb_Math_H_
 
+#include "_constant.h"
+
 namespace bnb
 {
-
-    const double _f_precision(0.000001);
-    const double _d_precision(0.0000000000000001);
 
 #ifdef  _not_high_precision
 #define _precision  _f_precision
@@ -41,15 +40,15 @@ namespace bnb
     float ceil(float _digit);                               // return >= _digit
     float modf(float _digit, float& _part);                 // _digit = (return) + (int)_part
     float fmod(float _x, float _y);                         // return _x % _y
+    float exp(float _index);                                // return e^_index
     float ldexp(float _digit, int n);                       // return _digit*2^n(_digit<<n)
     float frexp(float _digit, int& _index);                 // _digit = (return)*2^_index
     float hypot(float _a, float _b);                        // return sqrt(_a^2 + _b^2)
     float extract(float _digit, int n);                     // return _digit^(1/n)
     float ln(float _digit);                                 // return log e^_digit
-    float lg(float _digit);                                 // return log 10^_digit
-    float lb(float _digit);                                 // return log 2^_digit
-    float log(float _base, float _digit);                   // return log _base^_digit
-    float exp(float _index);                                // return e^_index
+    inline float lg(float _digit) { return (float)(ln(_digit) * _1_ln10); }
+    inline float lb(float _digit) { return (float)(ln(_digit) * _1_ln2); }
+    inline float log(float _base, float _digit) { return (ln(_digit) / ln(_base)); }
 
     // exactly version
     double setsign(const double& _digit, const double& _src);
@@ -57,16 +56,16 @@ namespace bnb
     double floor(double _digit);
     double fmod(double _x, double _y);
     double modf(double _digit, double& _part);
+    double exp(double _index);
     double ldexp(double _digit, int n);
     double hypot(double _a, double _b);
     double frexp(double _digit, int& _index);
     double extract(double _digit, int n);
     double ln(double _digit);
-    double lg(double _digit);
-    double lb(double _digit);
-    double log(double _base, double _digit);
-    double exp(double _index);
-
+    inline double lg(double _digit) { return (ln(_digit) * _1_ln10); }
+    inline double lb(double _digit) { return (ln(_digit) * _1_ln2); }
+    inline double log(double _base, double _digit) { return (ln(_digit) / ln(_base)); }
+    
     // sqrt(_digit)
     double _sqrt(double _digit);
     float _sqrt(float _digit);
@@ -114,8 +113,20 @@ namespace bnb
     double power(double _x, double n);
     float power(float _x, float n);
 
-    unsigned int gcd(unsigned int _a, unsigned int _b); // return _a and _b greatest common divisor 
-    unsigned int lcm(unsigned int _a, unsigned int _b); // return _a and _b least common multiple
+    // return _a and _b greatest common divisor 
+    unsigned int gcd(unsigned int _a, unsigned int _b);
+    // return _a and _b least common multiple
+    inline unsigned int lcm(unsigned int _a, unsigned int _b)
+    {
+        if (0 < _a && 0 < _b)
+        {
+            return (_a * _b / gcd(_a, _b));
+        }
+
+        return 0;
+    }
+
+    unsigned int lcm(unsigned int _a, unsigned int _b);
 
     inline double angle_to_radian(double _angle) { return (_angle * 1.74532925199432957692e-2); }
     inline double radian_to_angle(double _radian) { return (_radian * 57.2957795130823208768); }
@@ -133,6 +144,5 @@ namespace bnb
     }
 
 }
-
 
 #endif

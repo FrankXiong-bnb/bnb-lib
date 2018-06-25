@@ -1,106 +1,105 @@
-#include "../standard/_definition.h"
-#include "../standard/_constant.h"
-#include "../standard/_math.h"
+#include "_math.h"
 
-_bnb_space_in
-
-// _digit^(1/n) = limitAm(m->infinite)  Am+1 = Am + [guess/(Am^(n-1)) - Am]/n
-double __bnbcall extract( double _digit, int n)
+namespace bnb
 {
-    if ( _digit > 0 )
+
+    // _digit^(1/n) = limitAm(m->infinite)  Am+1 = Am + [guess/(Am^(n-1)) - Am]/n
+    double extract(double _digit, int n)
     {
-        if ( !!!n || 1.0 == _digit ) return 1.0;
-
-        unsigned int bit = abs(n), count = bit;
-        const double _series = _digit / count;
-
-        for (unsigned int i = 1; ; )
+        if (_digit > 0)
         {
-            double _last = _digit;
-            _digit = sqrt(_digit);
+            if (0 == n || 1.0 == _digit) return 1.0;
 
-            i <<= 1, bit >>= 1;
+            unsigned int bit = abs(n), count = bit;
+            const double _series = _digit / count;
 
-            if ( !!!bit )
+            for (unsigned int i = 1; ; )
             {
-                double l = 1.0 / i, r = l + l, m = 1.0 / count;
+                double _last = _digit;
+                _digit = sqrt(_digit);
 
-                if ( _digit > 1.0 )
+                i <<= 1, bit >>= 1;
+
+                if (0 == bit)
                 {
-                    m = (m + l) * 0.5;
-                    _digit = (_last - _digit) * (r - m) / (r - l) + _digit;
-                } 
-                else
-                {
-                    m = (m + r) * 0.5;
-                    _digit = (_digit - _last) * (m - l) / (r - l) + _last;
+                    double l = 1.0 / i, r = l + l, m = 1.0 / count;
+
+                    if (_digit > 1.0)
+                    {
+                        m = (m + l) * 0.5;
+                        _digit = (_last - _digit) * (r - m) / (r - l) + _digit;
+                    }
+                    else
+                    {
+                        m = (m + r) * 0.5;
+                        _digit = (_digit - _last) * (m - l) / (r - l) + _last;
+                    }
+
+                    break;
                 }
-
-                break;
             }
+
+            double factor = _series / power(_digit, int(count - 1)) - _digit / count;
+
+            for (_digit += factor; abs(factor) > 0.0000000000001; _digit += factor)
+            {
+                factor = _series / power(_digit, int(count - 1)) - _digit / count;
+            }
+
+            if (n < 0) return (1 / _digit);
         }
 
-        double factor = _series / power(_digit, int(count-1)) - _digit / count;
-
-        for ( _digit += factor; abs(factor) > 0.0000000000001; _digit += factor)
-        {
-            factor = _series / power(_digit, int(count-1)) - _digit / count;
-        }
-
-        if (n < 0) return (1 / _digit);
+        return _digit;
     }
 
-    return _digit;
-}
-
-float __bnbcall extract( float _digit, int n)
-{
-    if ( _digit > 0 )
+    float extract(float _digit, int n)
     {
-        if ( !!!n || 1.0 == _digit ) return 1.0;
-
-        unsigned int bit = abs(n), count = bit;
-        const float _series = _digit / count;
-
-        for (unsigned int i = 1; ; )
+        if (_digit > 0)
         {
-            float _last = _digit;
-            _digit = sqrt(_digit);
+            if (!!!n || 1.0 == _digit) return 1.0;
 
-            i <<= 1, bit >>= 1;
+            unsigned int bit = abs(n), count = bit;
+            const float _series = _digit / count;
 
-            if ( !!!bit )
+            for (unsigned int i = 1; ; )
             {
-                float l = 1.0f / i;
-                float r = l + l;
-                float m = 1.0f / count;
+                float _last = _digit;
+                _digit = sqrt(_digit);
 
-                if ( _digit > 1.0 )
+                i <<= 1, bit >>= 1;
+
+                if (!!!bit)
                 {
-                    m = (m + l) * 0.5f;
-                    _digit = (_last - _digit) * (r - m) / (r - l) + _digit;
-                } 
-                else
-                {
-                    m = (m + r) * 0.5f;
-                    _digit = (_digit - _last) * (m - l) / (r - l) + _last;
+                    float l = 1.0f / i;
+                    float r = l + l;
+                    float m = 1.0f / count;
+
+                    if (_digit > 1.0)
+                    {
+                        m = (m + l) * 0.5f;
+                        _digit = (_last - _digit) * (r - m) / (r - l) + _digit;
+                    }
+                    else
+                    {
+                        m = (m + r) * 0.5f;
+                        _digit = (_digit - _last) * (m - l) / (r - l) + _last;
+                    }
+
+                    break;
                 }
-
-                break;
             }
+
+            float factor = _series / power(_digit, int(count - 1)) - _digit / count;
+
+            for (_digit += factor; abs(factor) > _f_precision; _digit += factor)
+            {
+                factor = _series / power(_digit, int(count - 1)) - _digit / count;
+            }
+
+            if (n < 0) return (1 / _digit);
         }
 
-        float factor = _series / power(_digit, int(count-1)) - _digit / count;
-
-        for ( _digit += factor; abs(factor) > _f_precision; _digit += factor)
-        {
-            factor = _series / power(_digit, int(count-1)) - _digit / count;
-        }
-
-        if (n < 0) return (1 / _digit);
+        return _digit;
     }
 
-    return _digit;
 }
-
-_bnb_space_out

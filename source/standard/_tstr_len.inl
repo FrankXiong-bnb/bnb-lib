@@ -1,15 +1,16 @@
-#ifdef _declare_inside_name
 
-inline unsigned int __bnbcall _declare_inside_name(_len)( _in const _char_t* _str )
+template<typename _char_t>
+inline unsigned int t_str_len(const _char_t* _str)
 {
     const _char_t* pos = _str;
 
-    while ( *pos++ );
+    while (*pos++);
 
     return  (unsigned int)(pos - _str - 1);
 }
 
-inline unsigned int __bnbcall _declare_inside_name(_len)( _in const _char_t* _str, _in unsigned int maxsize )
+template<typename _char_t>
+inline unsigned int t_str_len(const _char_t* _str, unsigned int maxsize)
 {
     unsigned int n;
 
@@ -17,5 +18,3 @@ inline unsigned int __bnbcall _declare_inside_name(_len)( _in const _char_t* _st
 
     return n;
 }
-
-#endif

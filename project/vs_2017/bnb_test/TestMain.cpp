@@ -4,9 +4,24 @@
 
 int main()
 {
-    const unsigned char a = 1, b = 3;
+    for (int x = 10; x > 0; x--)
+    {
+        for (int y = 1; y < 11; ++y)
+        {
+            if (y > x)
+            {
+                printf(" ");
+            }
+            else
+            {
+                printf("*");
+            }
+        }
 
-    const int x = a - b;
+        printf("\n");
+    }
+
+    getchar();
 
     return 0;
 }

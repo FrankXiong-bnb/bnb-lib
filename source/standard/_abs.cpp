@@ -1,30 +1,31 @@
-#include "../standard/_definition.h"
-#include "../standard/_ieee_754.h"
 
-_bnb_space_in
+#include "_ieee_754.h"
+
+namespace bnb
+{
 
 #ifndef abs
 
-double __bnbcall abs( const double& _x )
-{
-    ieee_shape_double sd;
+    double abs(const double& _x)
+    {
+        ieee_shape_double sd;
 
-    sd._value = _x;
-    sd._digit &= 0x7fffffffffffffff;
-    
-    return sd._value;
-}
+        sd._value = _x;
+        sd._digit &= 0x7fffffffffffffff;
 
-float __bnbcall abs( const float& _x )
-{
-    ieee_shape_float sf;
+        return sd._value;
+    }
 
-    sf._value = _x;
-    sf._digit &= 0x7fffffff;
+    float abs(const float& _x)
+    {
+        ieee_shape_float sf;
 
-    return sf._value;
-}
+        sf._value = _x;
+        sf._digit &= 0x7fffffff;
+
+        return sf._value;
+    }
 
 #endif // #ifndef abs
 
-_bnb_space_out
+}

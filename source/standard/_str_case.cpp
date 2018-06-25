@@ -1,6 +1,8 @@
-#ifdef _declare_inside_name
 
-inline unsigned int __bnbcall _declare_inside_name(_lower)( char* _str )
+namespace bnb
+{
+
+inline unsigned int str_lower( char* _str )
 {
     unsigned int count = 0;
 
@@ -11,7 +13,7 @@ inline unsigned int __bnbcall _declare_inside_name(_lower)( char* _str )
     return count;
 }
 
-inline unsigned int __bnbcall _declare_inside_name(_lower)( char* _str, unsigned int n )
+inline unsigned int str_lower( char* _str, unsigned int n )
 {
     unsigned int count = 0;
 
@@ -22,7 +24,7 @@ inline unsigned int __bnbcall _declare_inside_name(_lower)( char* _str, unsigned
     return count;
 }
 
-inline unsigned int __bnbcall _declare_inside_name(_upper)( char* _str )
+inline unsigned int str_upper( char* _str )
 {
     unsigned int count = 0;
 
@@ -33,7 +35,7 @@ inline unsigned int __bnbcall _declare_inside_name(_upper)( char* _str )
     return count;
 }
 
-inline unsigned int __bnbcall _declare_inside_name(_upper)( char* _str, unsigned int n )
+inline unsigned int str_upper( char* _str, unsigned int n )
 {
     unsigned int count = 0;
 
@@ -44,4 +46,4 @@ inline unsigned int __bnbcall _declare_inside_name(_upper)( char* _str, unsigned
     return count;
 }
 
-#endif
+}

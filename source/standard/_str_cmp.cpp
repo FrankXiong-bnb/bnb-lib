@@ -1,6 +1,8 @@
-#ifdef _declare_inside_name
 
-inline int __bnbcall _declare_inside_name(_cmp)( const char* _str1, const char* _str2 )
+namespace bnb
+{
+
+inline int str_cmp( const char* _str1, const char* _str2 )
 {
     int _bool   = 0;
 
@@ -10,7 +12,7 @@ inline int __bnbcall _declare_inside_name(_cmp)( const char* _str1, const char* 
     return _bool;
 }
 
-inline int __bnbcall _declare_inside_name(_cmp)( const char* _str1, const char* _str2, _size_t n )
+inline int str_cmp( const char* _str1, const char* _str2, unsigned int n )
 {
     for ( unsigned int _index = 0; _index < n; ++_index, ++_str1, ++_str2)
         if (0 == *_str1 || *_str1 != *_str2)
@@ -19,7 +21,7 @@ inline int __bnbcall _declare_inside_name(_cmp)( const char* _str1, const char* 
     return 0;
 }
 
-inline int __bnbcall _declare_inside_name(_icmp)( const char* _str1, const char* _str2 )
+inline int str_icmp( const char* _str1, const char* _str2 )
 {
     int _val1, _val2;
 
@@ -34,7 +36,7 @@ inline int __bnbcall _declare_inside_name(_icmp)( const char* _str1, const char*
     return (_val1 - _val2);
 }
 
-inline int __bnbcall _declare_inside_name(_icmp)( const char* _str1, const char* _str2, _size_t n )
+inline int str_icmp( const char* _str1, const char* _str2, unsigned int n )
 {
     if( !!!n ) return 0;
 
@@ -51,4 +53,4 @@ inline int __bnbcall _declare_inside_name(_icmp)( const char* _str1, const char*
     return (_val1 - _val2);
 }
 
-#endif
+}
