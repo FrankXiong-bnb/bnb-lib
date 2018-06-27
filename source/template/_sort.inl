@@ -1,13 +1,8 @@
-#ifdef _algorithm_api
-
-#define _size_stack_quick       (8 * sizeof(int))
-#define _bound_sort_select      32
-#define _bound_quick_select     8
 
 template<typename _Ty, typename _LessT>
-void _Adjust_Heap(_Ty* _Head, _size_t _Hole, _size_t _Size, _LessT _pFunc)
+inline void _Adjust_Heap(_Ty* _Head, unsigned int _Hole, unsigned int _Size, _LessT _pFunc)
 {
-    _size_t _index = (_Hole << 1) + 2;
+    unsigned int _index = (_Hole << 1) + 2;
 
     while (_index < _Size)
     {
@@ -29,34 +24,28 @@ void _Adjust_Heap(_Ty* _Head, _size_t _Hole, _size_t _Size, _LessT _pFunc)
 }
 
 template<typename _Ty>
-void _Adjust_Heap(_Ty* _Head, _size_t _Hole, _size_t _Size)
+inline void _Adjust_Heap(_Ty* _Head, unsigned int _Hole, unsigned int _Size)
 {
     _Adjust_Heap(_Head, _Hole, _Size, [](const _Ty& left, const _Ty& right){ return left < right; });
 }
 
 template<typename _Ty, typename _LessT>
-void _Heap_Sort(_Ty* _Head, _size_t _Size, _LessT _pFunc)
+inline void _Heap_Sort(_Ty* _Head, unsigned int _Size, _LessT _pFunc)
 {
-    for (_size_t _Hole = _Size>>1; _Hole-- > 0; )
+    for (unsigned int _Hole = _Size>>1; 0 < _Hole--; )
         _Adjust_Heap(_Head, _Hole, _Size, _pFunc);
 
-    for ( --_Size; _Size > 0; --_Size)
+    for ( --_Size; 0 < _Size; --_Size)
     {
         Swap(_Head[0], _Head[_Size]);
         _Adjust_Heap(_Head, 0, _Size, _pFunc);
     }
 }
 
-template<typename _Ty>
-void _Heap_Sort(_Ty* _Head, _size_t _Size)
-{
-    _Heap_Sort(_Head, _Size, [](const _Ty& left, const _Ty& right){ return left < right; });
-}
-
 template<typename _Ty, typename _LessT>
-void _Selection_Sort(_Ty* _Head, _size_t _Size, _LessT _pFunc)
+inline void _Selection_Sort(_Ty* _Head, unsigned int _Size, _LessT _pFunc)
 {    
-    for (_index_t maxpos = 0, _index = 0; _Size > 0; )
+    for (unsigned int maxpos = 0, _index = 0; 0 < _Size; )
     {
         maxpos = 0;
         for (_index = 1; _index < _Size; ++_index)
@@ -67,27 +56,21 @@ void _Selection_Sort(_Ty* _Head, _size_t _Size, _LessT _pFunc)
     }
 }
 
-template<typename _Ty>
-void _Selection_Sort(_Ty* _Head, _size_t _Size)
-{    
-    _Selection_Sort(_Head, _Size, [](const _Ty& left, const _Ty& right){ return left < right; });
-}
-
 template<typename _Ty, typename _LessT>
-void _Quick_Sort(_Ty* _Head, _size_t _Size, _LessT _pFunc)
+inline void _Quick_Sort(_Ty* _Head, unsigned int _Size, _LessT _pFunc)
 {
-    _index_t _sl[_size_stack_quick] = { 0 }, _sr[_size_stack_quick] = { 0 };
-    _index_t lastL = 0, lastR = _Size - 1;
-    _index_t nextL = 0, nextR = 0;
-    _index_t mid = 0;
+    unsigned int _sl[0x20] = { 0 }, _sr[0x20] = { 0 };
+    unsigned int lastL = 0, lastR = _Size - 1;
+    unsigned int nextL = 0, nextR = 0;
+    unsigned int mid = 0;
 
-    _size_t _n = 0;
+    unsigned int _n = 0;
     int _s_top = 0;
 
     for ( ; ; ) {
         _n = lastR - lastL + 1;
 
-        if (_n < _bound_quick_select) {
+        if (_n < 8) {
             _Selection_Sort(_Head + lastL, _n, _pFunc);
         }
         else {
@@ -138,38 +121,29 @@ void _Quick_Sort(_Ty* _Head, _size_t _Size, _LessT _pFunc)
             }
         }
 
-        if (--_s_top < 0) break;
+        if (_s_top == 0)
+            break;
+        else
+            --_s_top;
 
         lastL = _sl[_s_top];
         lastR = _sr[_s_top];
     }
 }
 
-template<typename _Ty>
-void _Quick_Sort(_Ty* _Head, _size_t _Size)
-{    
-    _Quick_Sort(_Head, _Size, [](const _Ty& left, const _Ty& right){ return left < right; });
-}
-
 template<typename _Ty, typename _LessT>
-void _Bubble_Sort(_Ty* _Head, _size_t _Size, _LessT _pFunc)
+inline void _Bubble_Sort(_Ty* _Head, unsigned int _Size, _LessT _pFunc)
 {
-    for (_index_t i = 0; i < _Size; ++i)
-        for (_index_t j = i + 1; j < _Size; ++j)
+    for (unsigned int i = 0; i < _Size; ++i)
+        for (unsigned int j = i + 1; j < _Size; ++j)
             if (_pFunc(_Head[j], _Head[i]))
                 Swap(_Head[j], _Head[i]);
 }
 
-template<typename _Ty>
-void _Bubble_Sort(_Ty* _Head, _size_t _Size)
-{    
-    _Bubble_Sort(_Head, _Size, [](const _Ty& left, const _Ty& right){ return left < right; });
-}
-
 template<typename _Ty, typename _LessT>
-void _Insertion_Sort(_Ty* _Head, _size_t _Size, _LessT _pFunc)
+inline void _Insertion_Sort(_Ty* _Head, unsigned int _Size, _LessT _pFunc)
 {
-    for (_index_t i = 1; i < _Size; ++i)
+    for (unsigned int i = 1; i < _Size; ++i)
     {
         _Ty* next = _Head + i, key(*next);
 
@@ -190,18 +164,84 @@ void _Insertion_Sort(_Ty* _Head, _size_t _Size, _LessT _pFunc)
     }
 }
 
-template<typename _Ty>
-void _Insertion_Sort(_Ty* _Head, _size_t _Size)
-{    
-    _Insertion_Sort(_Head, _Size, [](const _Ty& left, const _Ty& right){ return left < right; });
-}
-
-template<typename _Ty>
-void _Sort(_Ty* _Head, _size_t _Size)
+template<typename _Ty, typename _LessT>
+inline void HeapSort(_Ty* _Head, unsigned int _Size, _LessT _pFunc)
 {
-    if (_Size < 2) return;
-
-    _Insertion_Sort(_Head, _Size);
+    if (_Head != nullptr && 1 < _Size)
+        _Heap_Sort(_Head, _Size, _pFunc);
 }
 
-#endif
+template<typename _Ty>
+inline void HeapSort(_Ty* _Head, unsigned int _Size)
+{
+    if (_Head != nullptr && 1 < _Size)
+        _Heap_Sort(_Head, _Size, [](const _Ty& left, const _Ty& right) { return left < right; });
+}
+
+template<typename _Ty, typename _LessT>
+inline void SelectionSort(_Ty* _Head, unsigned int _Size, _LessT _pFunc)
+{
+    if (_Head != nullptr && 1 < _Size)
+        _Selection_Sort(_Head, _Size, _pFunc);
+}
+
+template<typename _Ty>
+inline void SelectionSort(_Ty* _Head, unsigned int _Size)
+{
+    if (_Head != nullptr && 1 < _Size)
+        _Selection_Sort(_Head, _Size, [](const _Ty& left, const _Ty& right) { return left < right; });
+}
+
+template<typename _Ty, typename _LessT>
+inline void BubbleSort(_Ty* _Head, unsigned int _Size, _LessT _pFunc)
+{
+    if (_Head != nullptr && 1 < _Size)
+        _Bubble_Sort(_Head, _Size, _pFunc);
+}
+
+template<typename _Ty>
+inline void BubbleSort(_Ty* _Head, unsigned int _Size)
+{
+    if (_Head != nullptr && 1 < _Size)
+        _Bubble_Sort(_Head, _Size, [](const _Ty& left, const _Ty& right) { return left < right; });
+}
+
+template<typename _Ty, typename _LessT>
+inline void InsertionSort(_Ty* _Head, unsigned int _Size, _LessT _pFunc)
+{
+    if (_Head != nullptr && 1 < _Size)
+        _Insertion_Sort(_Head, _Size, _pFunc);
+}
+
+template<typename _Ty>
+inline void InsertionSort(_Ty* _Head, unsigned int _Size)
+{
+    if (_Head != nullptr && 1 < _Size)
+        _Insertion_Sort(_Head, _Size, [](const _Ty& left, const _Ty& right) { return left < right; });
+}
+
+template<typename _Ty, typename _LessT>
+inline void QuickSort(_Ty* _Head, unsigned int _Size, _LessT _pFunc)
+{
+    if (_Head != nullptr && 1 < _Size)
+        _Quick_Sort(_Head, _Size, _pFunc);
+}
+
+template<typename _Ty>
+inline void QuickSort(_Ty* _Head, unsigned int _Size)
+{
+    if (_Head != nullptr && 1 < _Size)
+        _Quick_Sort(_Head, _Size, [](const _Ty& left, const _Ty& right) { return left < right; });
+}
+
+template<typename _Ty>
+inline void Sort(_Ty* _Head, unsigned int _Size)
+{
+    InsertionSort(_Head, _Size);
+}
+
+template<typename _Ty, typename _LessT>
+inline void Sort(_Ty* _Head, unsigned int _Size, _LessT _pFunc)
+{
+    InsertionSort(_Head, _Size, _pFunc);
+}

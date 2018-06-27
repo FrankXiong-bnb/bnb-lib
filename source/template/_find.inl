@@ -1,4 +1,3 @@
-#ifdef _algorithm_api
 
 template<typename _IterT, typename _Ty>
 inline _IterT Find(_IterT first, _IterT last, _Ty val)
@@ -37,9 +36,12 @@ inline const unsigned char* Find(const unsigned char* first, const unsigned char
     return first;
 }
 
-
 template<typename _IterT, typename _FuncT>
-_IterT FindOf(_IterT first, _IterT last, _FuncT pfun) { }
+inline _IterT FindIf(_IterT first, _IterT last, _FuncT pfun)
+{
+    for (; first != last; ++first)
+        if (pfun(*first))
+            break;
 
-
-#endif
+    return first;
+}

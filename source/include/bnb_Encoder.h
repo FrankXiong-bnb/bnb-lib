@@ -1,4 +1,4 @@
-#include "../standard/_definition.h"
+
 #include "../standard/_encoder_base.h"
 #include "../standard/_alphabet_map.h"
 #include "../standard/_encoder_key.h"

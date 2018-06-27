@@ -19,6 +19,9 @@
     <Filter Include="utility">
       <UniqueIdentifier>{b283c527-4122-4124-8d31-e9a7a031232c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{ded026bd-3b9e-4394-9497-3dfb934e61d6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\source\standard\_alphabet_map.h">
@@ -117,6 +120,39 @@
     <ClInclude Include="..\..\..\source\standard\_numeral.h">
       <Filter>utility</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\source\template\_type_traits.h">
+      <Filter>template</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\include\bnb_Algorithm.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\include\bnb_BitShift.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\include\bnb_Constant.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\include\bnb_Data.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\include\bnb_Encoder.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\include\bnb_IEEEE754.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\include\bnb_Math.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\include\bnb_Memory.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\include\bnb_StrApi.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\include\bnb_Tchar.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\standard\_gcd.cpp">
@@ -173,6 +209,12 @@
     <ClCompile Include="..\..\..\source\standard\_tangent.cpp">
       <Filter>standard</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\source\encrypt\_rc4.cpp">
+      <Filter>encrypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\encrypt\_sha256.cpp">
+      <Filter>encrypt</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\source\standard\_tstr_cat.inl">
@@ -222,6 +264,15 @@
     </None>
     <None Include="..\..\..\source\standard\_wstr_spn.cpp">
       <Filter>standard</Filter>
+    </None>
+    <None Include="..\..\..\source\template\_swap.inl">
+      <Filter>template</Filter>
+    </None>
+    <None Include="..\..\..\source\template\_reverse.inl">
+      <Filter>template</Filter>
+    </None>
+    <None Include="..\..\..\source\template\_remove.inl">
+      <Filter>template</Filter>
     </None>
   </ItemGroup>
 </Project>

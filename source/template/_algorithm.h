@@ -1,111 +1,54 @@
-#ifndef ____bnb_Algorithm_h_
-#define ____bnb_Algorithm_h_
+#ifndef ____bnb_Algorithm_H_
+#define ____bnb_Algorithm_H_
 
-// 插入
+#include "../template/_template.h"
+#include "../template/_type_traits.h"
 
-// 删除
-
-// 复制
-
-// 替换
-
-// 查找
-
-// 移动
-
-// 交换
-
-// 反转
-
-// 比较
-
-// 排序
-
-// 排列
-
-// 组合
-
-// 统计
-
-// 合并
-
-
-
-_bnb_space_in
-/*
-template<typename _Ty>
-void Copy();
-
-template<typename _Ty>
-void Compare();
-
-void Insert();
-
-void Delete();
-
-void Replace();
-
-void ForEach();
-
-void Begin();
-
-void End();
-*/
-template<typename _Ty>
-inline void Swap(_Ty& left, _Ty& right)
+namespace bnb
 {
-    _Ty _temp(left);
-    left    = right;
-    right   = _temp;
-}
+    // 移动
+    template<class _Ty>
+    inline constexpr typename remove_reference<_Ty>::type&& Move(_Ty&& _arg) noexcept
+    {
+        return (static_cast<typename remove_reference<_Ty>::type&&>(_arg));
+    }
 
-template<typename _Ty>
-inline void Swap(_Ty* left, _Ty* right)
-{
-    Swap(*left, *right)
-}
+    // 转发
+    template<class _Ty>
+    inline constexpr _Ty&& Forward(typename remove_reference<_Ty>::type& _Arg) noexcept
+    {
+        return (static_cast<_Ty&&>(_Arg));
+    }
 
-template<typename _IterT>
-inline void IterSwap(_IterT left, _IterT right)
-{
-    Swap(*left, *right);
-}
+    template<class _Ty>
+    inline constexpr _Ty&& Forward(typename remove_reference<_Ty>::type&& _Arg) noexcept
+    {
+        static_assert(!is_lvalue_reference<_Ty>::value, "bad forward call");
+        return (static_cast<_Ty&&>(_Arg));
+    }
 
-template<typename _IterT>
-_IterT Remove(_IterT first, _IterT last) { }
-
-
-template<typename _IterT>
-inline void Reverse(_IterT first, _IterT last)
-{
-    for ( ; first != last && first != --last; ++first)
-        IterSwap(first, last);
-}
-
-
-template<typename _Ty1, typename _Ty2>
-void Reverse(_Ty1 first, _Ty1 last, _Ty2 dst)
-{
-
-}
-
-#ifndef _algorithm_api
-#define _algorithm_api
-
-// ...
-
+    // 查找
 #include "../template/_find.inl"
-
+    // 交换
+#include "../template/_swap.inl"
+    // 删除
+#include "../template/_remove.inl"
+    // 替换
 #include "../template/_replace.inl"
-
+    // 反转
+#include "../template/_reverse.inl"
+    // 排序
+#include "../template/_sort.inl"
+    // 排列-组合
 #include "../template/_permutation.inl"
 
-#include "../template/_sort.inl"
+    // 插入
+    // 复制
+    // 比较
+    // 统计
+    // 合并
+    // 遍历
 
-#undef  _algorithm_api
+}
 
-#endif
-
-_bnb_space_out
-
-#endif
+#endif  // ____bnb_Algorithm_H_
