@@ -1,5 +1,5 @@
-#ifndef ____bnb_Point_H_
-#define ____bnb_Point_H_
+#ifndef ____bnb_Path_H_
+#define ____bnb_Path_H_
 
 #include "_point.h"
 
@@ -44,4 +44,4 @@ namespace bnb
     };
 }
 
-#endif
+#endif  // ____bnb_Path_H_

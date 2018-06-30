@@ -11,12 +11,6 @@
 namespace bnb
 {
 
-#ifdef  _not_high_precision
-#define _precision  _f_precision
-#else
-#define _precision  _d_precision
-#endif  // #ifdef  _not_high_precision
-
 #ifndef min
     template<typename _Ty> inline const _Ty& min(const _Ty& _a, const _Ty& _b) { return (_a < _b ? _a : _b); }
 #endif
@@ -119,17 +113,15 @@ namespace bnb
     inline unsigned int lcm(unsigned int _a, unsigned int _b)
     {
         if (0 < _a && 0 < _b)
-        {
             return (_a * _b / gcd(_a, _b));
-        }
 
         return 0;
     }
 
     unsigned int lcm(unsigned int _a, unsigned int _b);
 
-    inline double angle_to_radian(double _angle) { return (_angle * 1.74532925199432957692e-2); }
-    inline double radian_to_angle(double _radian) { return (_radian * 57.2957795130823208768); }
+    inline double angle_to_radian(double _angle) { return (_angle * _pi_180); }
+    inline double radian_to_angle(double _radian) { return (_radian * _180_pi); }
     inline float angle_to_radian(float _angle) { return (float)angle_to_radian((double)_angle); }
     inline float radian_to_angle(float _radian) { return (float)radian_to_angle((double)_radian); }
 

@@ -29,16 +29,22 @@ namespace bnb
 
     // 查找
 #include "../template/_find.inl"
+
     // 交换
 #include "../template/_swap.inl"
+
     // 删除
 #include "../template/_remove.inl"
+
     // 替换
 #include "../template/_replace.inl"
+
     // 反转
 #include "../template/_reverse.inl"
+
     // 排序
 #include "../template/_sort.inl"
+
     // 排列-组合
 #include "../template/_permutation.inl"
 

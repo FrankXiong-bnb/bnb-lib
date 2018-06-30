@@ -15,14 +15,6 @@ namespace bnb
         0x63, 0x58, 0x4c, 0x46
     };
 
-    const unsigned char _gc_def_base_alphabet[64] =
-    {
-        '7', 'X', 'w', 'e', '8', 'r', 't', 'u', 'g', '0', 'P', 'A', '2', 's', 'k', '5',
-        'd', 'f', '4', 'h', 'J', 'z', 'C', '3', 'v', 'y', '6', 'b', 'n', 'm', '1', 'i',
-        'o', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'p', 'a', 'S', 'D', 'F', 'G',
-        'H', 'j', 'K', 'L', 'Z', 'x', 'c', 'V', 'q', 'N', 'M', 'l', 'B', '9', '_', '*'
-    };
-
     const unsigned char _gc_def_map_table1[256] =
     {
         0x36, 0x43, 0x13, 0x1d, 0x0e, 0x81, 0xa9, 0xef, 0xcc, 0x04, 0xc8, 0x5c, 0xa2, 0xfe, 0x31, 0x0d,

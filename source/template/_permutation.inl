@@ -75,12 +75,12 @@ bool PrevPermutation(_IterT first, _IterT last)
     return PrevPermutation(first, last, [](_Ty&& left, _Ty&& right){ return left < right; });
 }
 
-class _simple_stack
+class _simple_fix_stack
 {
 public:
 
-    _simple_stack(unsigned int n) : _size(n), _index(0) { _stack = new unsigned int[_size]; }
-    ~_simple_stack() { delete[] _stack; }
+    _simple_fix_stack(unsigned int n) : _size(n), _index(0) { _stack = new unsigned int[_size]; }
+    ~_simple_fix_stack() { delete[] _stack; }
 
     void push(const unsigned int& val) { _stack[_index++] = val; }
     unsigned int pop() { return _stack[--_index]; }
@@ -115,83 +115,85 @@ unsigned int Permutation(unsigned int _size, unsigned int _n, _FuncT pfunc)
         _n = _size;
 
     if (_n == 0)
-        return 1;
+        return pfunc(nullptr, 0) ? 1 : 0;
     
     unsigned int _count = 0;
 
-    _simple_stack _ss{ _n };
+    _simple_fix_stack _sfs{ _n };
 
     do
     {
         for (unsigned int _pos = 0; _pos < _size; ++_pos)
         {
-            if ( !!!_ss.existing(_pos) )
+            if ( !!!_sfs.existing(_pos) )
             {
-                _ss.push(_pos);
+                _sfs.push(_pos);
                 break;
             }
         }
 
-        while (_ss.is_full())
+        while (_sfs.is_full())
         {
-            if (pfunc(_ss.data(), _ss.index()))
+            if (pfunc(_sfs.data(), _sfs.index()))
                 ++_count;
 
-            for (unsigned int _pos = _size; _size <= _pos && !_ss.is_empty(); )
+            for (unsigned int _pos = _size; _size <= _pos && !_sfs.is_empty(); )
             {
-                _pos = _ss.pop();
+                _pos = _sfs.pop();
 
                 for (++_pos; _pos < _size; ++_pos)
                 {
-                    if (!!!_ss.existing(_pos))
+                    if (!!!_sfs.existing(_pos))
                     {
-                        _ss.push(_pos);
+                        _sfs.push(_pos);
                         break;
                     }
                 }
             }
         }
-    } while (!_ss.is_empty());
+    } while (!_sfs.is_empty());
 
     return _count;
 }
 
-template<typename _FuncT, typename _Ty>
-unsigned int Combination(_FuncT pFunc, _Ty& obj, unsigned int m, unsigned int n)
+template<typename _FuncT>
+unsigned int Combination(unsigned int _size, unsigned int _n, _FuncT pfunc)
 {
-    if (n > m) n = m;
-    if (n == 0) return 1;
+    if (_n > _size)
+        _n = _size;
 
-    unsigned int _Pos = 0;
-    unsigned int _Index = 0;
-    unsigned int* _Stack = new unsigned int[n];
+    if (_n == 0)
+        return pfunc(nullptr, 0) ? 1 : 0;
 
     unsigned int _Count = 0;
-    const unsigned int _X = m - n;
+    const unsigned int _x = _size - _n;
 
-    do {
-        _Stack[_Index++] = _Pos;
+    _simple_fix_stack _sfs{ _n };
 
-        for ( ; _Index == n; ++_Count)
+    for (unsigned int _pos = 0; ; ++_pos)
+    {
+        _sfs.push(_pos);
+
+        while (_sfs.is_full())
         {
-            pFunc(obj, const_cast<const unsigned int*>(_Stack), _Index);
+            if (pfunc(_sfs.data(), _sfs.index()))
+                ++_Count;
 
-            for (_Pos = m; _Pos >= (_X + _Index) && _Index; )
+            for (_pos = _size; (_x + _sfs.index()) <= _pos && !_sfs.is_empty(); )
             {
-                _Pos = _Stack[--_Index] + 1;
+                _pos = _sfs.pop() + 1;
 
-                if (_Pos <= (_X + _Index))
+                if (_pos <= (_x + _sfs.index()))
                 {
-                    _Stack[_Index++] = _Pos;
+                    _sfs.push(_pos);
                     break;
                 }
             }
         }
 
-        ++_Pos;
-    } while (_Index);
-
-    delete [] _Stack;
+        if (_sfs.is_empty())
+            break;
+    }
 
     return _Count;
 }

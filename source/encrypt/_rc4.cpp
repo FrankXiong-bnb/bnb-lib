@@ -17,7 +17,7 @@ const unsigned char _just_my_favourite[] = {
 
 	unsigned int RC4Encoding(unsigned char* dst, const unsigned char* src, unsigned int nsrc, const unsigned char* key, unsigned int nkey)
 	{
-		if (dst && src && 0 < nsrc)
+		if (nullptr != dst && nullptr != src && 0 < nsrc)
 		{
 			unsigned char _sbox[] = {
 				0xd1, 0x45, 0xef, 0x06, 0x0d, 0xa9, 0x50, 0xe9, 0x81, 0x57, 0x32, 0x8c, 0x09, 0x8a, 0xf7, 0xe0,

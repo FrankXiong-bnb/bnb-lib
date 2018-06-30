@@ -24,9 +24,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\source\standard\_alphabet_map.h">
-      <Filter>standard</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\source\standard\_bitshift.h">
       <Filter>standard</Filter>
     </ClInclude>
@@ -50,15 +47,6 @@
     </ClInclude>
     <ClInclude Include="..\..\..\source\standard\_variant.h">
       <Filter>standard</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\standard\_base64.h">
-      <Filter>encrypt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\standard\_encoder_base.h">
-      <Filter>encrypt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\standard\_encoder_key.h">
-      <Filter>encrypt</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\source\template\_algorithm.h">
       <Filter>template</Filter>
@@ -153,6 +141,21 @@
     <ClInclude Include="..\..\..\source\include\bnb_Tchar.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\source\encrypt\_hash_seq.h">
+      <Filter>encrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\encrypt\_alphabet_map.h">
+      <Filter>encrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\encrypt\_base64.h">
+      <Filter>encrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\encrypt\_encoder_base.h">
+      <Filter>encrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\encrypt\_encoder_key.h">
+      <Filter>encrypt</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\standard\_gcd.cpp">
@@ -213,6 +216,9 @@
       <Filter>encrypt</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\source\encrypt\_sha256.cpp">
+      <Filter>encrypt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\encrypt\_base64.cpp">
       <Filter>encrypt</Filter>
     </ClCompile>
   </ItemGroup>
