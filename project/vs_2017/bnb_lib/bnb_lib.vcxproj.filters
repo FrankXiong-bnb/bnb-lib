@@ -141,19 +141,10 @@
     <ClInclude Include="..\..\..\source\include\bnb_Tchar.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\source\encrypt\_hash_seq.h">
-      <Filter>encrypt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\encrypt\_alphabet_map.h">
-      <Filter>encrypt</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\source\encrypt\_base64.h">
       <Filter>encrypt</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\source\encrypt\_encoder_base.h">
-      <Filter>encrypt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\source\encrypt\_encoder_key.h">
+    <ClInclude Include="..\..\..\source\encrypt\_encrypt.h">
       <Filter>encrypt</Filter>
     </ClInclude>
   </ItemGroup>
@@ -215,10 +206,10 @@
     <ClCompile Include="..\..\..\source\encrypt\_rc4.cpp">
       <Filter>encrypt</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\source\encrypt\_sha256.cpp">
+    <ClCompile Include="..\..\..\source\encrypt\_base64.cpp">
       <Filter>encrypt</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\source\encrypt\_base64.cpp">
+    <ClCompile Include="..\..\..\source\encrypt\_message_digest.cpp">
       <Filter>encrypt</Filter>
     </ClCompile>
   </ItemGroup>
@@ -279,6 +270,12 @@
     </None>
     <None Include="..\..\..\source\template\_remove.inl">
       <Filter>template</Filter>
+    </None>
+    <None Include="..\..\..\source\encrypt\_sha256.inl">
+      <Filter>encrypt</Filter>
+    </None>
+    <None Include="..\..\..\source\encrypt\_md5.inl">
+      <Filter>encrypt</Filter>
     </None>
   </ItemGroup>
 </Project>

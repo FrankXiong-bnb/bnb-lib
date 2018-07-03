@@ -8,9 +8,6 @@
 namespace bnb
 {
 
-    unsigned int Base64Encrypt(unsigned char* dst, const unsigned char* src, unsigned int n);
-    unsigned int Base64Decrypt(unsigned char* dst, const unsigned char* src, unsigned int n);
-
     class EncoderBase64
     {
     public:

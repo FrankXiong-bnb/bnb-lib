@@ -93,7 +93,7 @@ inline void _Quick_Sort(_Ty* _Head, unsigned int _Size, _LessT _pFunc)
                 if (mid == nextR) mid = nextL;
             }
 
-            for ( ; nextR > lastL && !_pFunc(_Head[nextR], _Head[mid]); --nextR);
+            for ( ; lastL < nextR && !_pFunc(_Head[nextR], _Head[mid]); --nextR);
 
             if (nextR - lastL < lastR - nextL) {
                 if (nextL < lastR) {

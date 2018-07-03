@@ -38,9 +38,17 @@ void Show(const _Ty* s, unsigned int n)
     std::cout << std::endl;
 }
 
+void test_arr(int (f)[4])
+{
+    for (int i = 0; i < 4; i++)
+    {
+        f[i] += 1;
+    }
+}
+
 #include <Windows.h>
 
-#include "../encrypt/_base64.h"
+#include "../encrypt/_encrypt.h"
 
 int main()
 {
@@ -82,13 +90,27 @@ int main()
     }
     */
 
-    unsigned char src[] = "a234jdfgdsgfjgjgaadhg012ab~!@#$%^&*(_+_-=,.><?/abc";
+    unsigned char src[] = "khfkshfhaisgiweuqgq* Note: Replace for loop with standard memset if possible.wbghqjbgjqhgwfgqkfhkah* Note: Replacefor loop with standard memset if possible.kfhaskdhfkadsjgfadg* Note: Replace with standard memset if possible.shh* Note: Replace with standard memset if possible.";
+    /*
     unsigned char buf1[1024]{ 0 }, buf2[1024]{ 0 };
     bnb::Base64Encrypt(buf1, src, 50);
     std::cout << buf1 << std::endl;
 
     bnb::Base64Decrypt(buf2, buf1, 68);
     std::cout << buf2 << std::endl;
+    */
+
+    unsigned char xxx64[64]{ 0 }, xxx32[32]{ 0 }, xxx16[16]{ 0 };
+    bnb::MD5(xxx16, src, sizeof(src) - 1);
+    bnb::DigestToSignature(xxx32, xxx16);
+    Show(xxx32, 32);
+
+    bnb::SHA256(xxx32, src, sizeof(src) - 1);
+    bnb::DigestToSignature(xxx64, xxx32);
+    Show(xxx64, 64);
 
     return 0;
 }
+
+
+

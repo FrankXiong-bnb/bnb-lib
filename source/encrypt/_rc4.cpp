@@ -15,9 +15,9 @@ const unsigned char _just_my_favourite[] = {
 };
 */
 
-	unsigned int RC4Encoding(unsigned char* dst, const unsigned char* src, unsigned int nsrc, const unsigned char* key, unsigned int nkey)
+	unsigned int RC4Encoding(unsigned char* dst, const unsigned char* src, unsigned int n, const unsigned char* key, unsigned int nKey)
 	{
-		if (nullptr != dst && nullptr != src && 0 < nsrc)
+		if (nullptr != dst && nullptr != src && 0 < n)
 		{
 			unsigned char _sbox[] = {
 				0xd1, 0x45, 0xef, 0x06, 0x0d, 0xa9, 0x50, 0xe9, 0x81, 0x57, 0x32, 0x8c, 0x09, 0x8a, 0xf7, 0xe0,
@@ -38,16 +38,16 @@ const unsigned char _just_my_favourite[] = {
 				0x36, 0x4b, 0xa4, 0xaa, 0x13, 0xcb, 0x91, 0x77, 0x19, 0xba, 0x04, 0x6f, 0x70, 0x84, 0x9a, 0xe6,
 			};
 
-			if (key && 0 < nkey)
+			if (key && 0 < nKey)
 			{
 				for (unsigned int i = 0, k = 0; i < 0x0100; ++i)
 				{
-					k = ((k + _sbox[i] + key[i % nkey]) & 0xff);
+					k = ((k + _sbox[i] + key[i % nKey]) & 0xff);
 					_sbox[i] ^= _sbox[k] ^= _sbox[i] ^= _sbox[k];
 				}
 			}
 
-			for (unsigned int i = 0, x = 0, y = 0; i < nsrc; ++i)
+			for (unsigned int i = 0, x = 0, y = 0; i < n; ++i)
 			{
 				x = ((x + 1) & 0xff);
 				y = ((y + _sbox[x]) & 0xff);
@@ -55,7 +55,7 @@ const unsigned char _just_my_favourite[] = {
 				dst[i] = (src[i] ^ _sbox[(_sbox[x] + _sbox[y]) & 0xff]);
 			}
 
-			return nsrc;
+			return n;
 
 		}
 
