@@ -1,7 +1,7 @@
 #ifndef ____bnb_Path_H_
 #define ____bnb_Path_H_
 
-#include "_point.h"
+#include "class/_point.h"
 
 namespace bnb
 {

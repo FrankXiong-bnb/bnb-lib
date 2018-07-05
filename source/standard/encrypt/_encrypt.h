@@ -45,6 +45,6 @@ namespace bnb
 
 }
 
-#include "../encrypt/_base64.h"
+#include "encrypt/_base64.h"
 
 #endif  // ____bnb_Encrypt_H_

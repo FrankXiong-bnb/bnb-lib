@@ -6,7 +6,7 @@
 #ifndef ____bnb_Math_H_
 #define ____bnb_Math_H_
 
-#include "_constant.h"
+#include "utility/_constant.h"
 
 namespace bnb
 {

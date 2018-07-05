@@ -23,18 +23,17 @@ namespace bnb
 
     constexpr _endian_type _check_endian()
     {
-        const union {
+        constexpr union {
             unsigned short _value;
             unsigned char _endian;
-        }
-        _test_endian = { _little_endian | _big_endian };
+        } _test_endian { _little_endian | _big_endian };
 
         return static_cast<_endian_type>(_test_endian._endian);
     }
 
-    const _endian_type _ieee_big_endian = _check_endian();
+    const _endian_type _ieee_endian = _check_endian();
 
-#if _ieee_big_endian == _little_endian
+#if _ieee_endian == _little_endian
 
     typedef union {
         double  _value;

@@ -18,6 +18,95 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\standard\encrypt\_base64.cpp" />
+    <ClCompile Include="..\..\..\source\standard\encrypt\_message_digest.cpp" />
+    <ClCompile Include="..\..\..\source\standard\encrypt\_rc4.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_abs.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_arcsine.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_arctangent.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_exp.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_extract.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_frexp.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_gcd.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_hypot.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_intercept.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_ldexp.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_log.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_memory.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_mod.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_power.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_setsign.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_sine.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_sqrt.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_str_case.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_str_cmp.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_str_spn.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_tangent.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_wstr_case.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_wstr_cmp.cpp" />
+    <ClCompile Include="..\..\..\source\standard\utility\_wstr_spn.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\source\standard\bnb_Algorithm.h" />
+    <ClInclude Include="..\..\..\source\standard\bnb_BitShift.h" />
+    <ClInclude Include="..\..\..\source\standard\bnb_Constant.h" />
+    <ClInclude Include="..\..\..\source\standard\bnb_Data.h" />
+    <ClInclude Include="..\..\..\source\standard\bnb_Encoder.h" />
+    <ClInclude Include="..\..\..\source\standard\bnb_IEEEE754.h" />
+    <ClInclude Include="..\..\..\source\standard\bnb_Math.h" />
+    <ClInclude Include="..\..\..\source\standard\bnb_Memory.h" />
+    <ClInclude Include="..\..\..\source\standard\bnb_StrApi.h" />
+    <ClInclude Include="..\..\..\source\standard\bnb_Tchar.h" />
+    <ClInclude Include="..\..\..\source\standard\class\_numeral.h" />
+    <ClInclude Include="..\..\..\source\standard\class\_path.h" />
+    <ClInclude Include="..\..\..\source\standard\class\_point.h" />
+    <ClInclude Include="..\..\..\source\standard\class\_rectangle.h" />
+    <ClInclude Include="..\..\..\source\standard\class\_repeat_buffer.h" />
+    <ClInclude Include="..\..\..\source\standard\class\_variant.h" />
+    <ClInclude Include="..\..\..\source\standard\encrypt\_base64.h" />
+    <ClInclude Include="..\..\..\source\standard\encrypt\_encrypt.h" />
+    <ClInclude Include="..\..\..\source\standard\template\_algorithm.h" />
+    <ClInclude Include="..\..\..\source\standard\template\_array.h" />
+    <ClInclude Include="..\..\..\source\standard\template\_iterator.h" />
+    <ClInclude Include="..\..\..\source\standard\template\_list.h" />
+    <ClInclude Include="..\..\..\source\standard\template\_map.h" />
+    <ClInclude Include="..\..\..\source\standard\template\_pair.h" />
+    <ClInclude Include="..\..\..\source\standard\template\_queue.h" />
+    <ClInclude Include="..\..\..\source\standard\template\_set.h" />
+    <ClInclude Include="..\..\..\source\standard\template\_smart_buf.h" />
+    <ClInclude Include="..\..\..\source\standard\template\_stack.h" />
+    <ClInclude Include="..\..\..\source\standard\template\_string.h" />
+    <ClInclude Include="..\..\..\source\standard\template\_template.h" />
+    <ClInclude Include="..\..\..\source\standard\template\_trait_char.h" />
+    <ClInclude Include="..\..\..\source\standard\template\_tree.h" />
+    <ClInclude Include="..\..\..\source\standard\template\_type_traits.h" />
+    <ClInclude Include="..\..\..\source\standard\utility\_bitshift.h" />
+    <ClInclude Include="..\..\..\source\standard\utility\_constant.h" />
+    <ClInclude Include="..\..\..\source\standard\utility\_data.h" />
+    <ClInclude Include="..\..\..\source\standard\utility\_ieee_754.h" />
+    <ClInclude Include="..\..\..\source\standard\utility\_math.h" />
+    <ClInclude Include="..\..\..\source\standard\utility\_memory.h" />
+    <ClInclude Include="..\..\..\source\standard\utility\_string.h" />
+    <ClInclude Include="..\..\..\source\standard\utility\_tchar.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\source\standard\encrypt\_md5.inl" />
+    <None Include="..\..\..\source\standard\encrypt\_sha256.inl" />
+    <None Include="..\..\..\source\standard\template\_find.inl" />
+    <None Include="..\..\..\source\standard\template\_permutation.inl" />
+    <None Include="..\..\..\source\standard\template\_remove.inl" />
+    <None Include="..\..\..\source\standard\template\_replace.inl" />
+    <None Include="..\..\..\source\standard\template\_reverse.inl" />
+    <None Include="..\..\..\source\standard\template\_sort.inl" />
+    <None Include="..\..\..\source\standard\template\_swap.inl" />
+    <None Include="..\..\..\source\standard\utility\_tstr_cat.inl" />
+    <None Include="..\..\..\source\standard\utility\_tstr_cpy.inl" />
+    <None Include="..\..\..\source\standard\utility\_tstr_find.inl" />
+    <None Include="..\..\..\source\standard\utility\_tstr_len.inl" />
+    <None Include="..\..\..\source\standard\utility\_tstr_reverse.inl" />
+    <None Include="..\..\..\source\standard\utility\_tstr_set.inl" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{87815059-1C87-4CFD-9313-BE65BFF646E2}</ProjectGuid>
@@ -83,7 +172,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../../source/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../source/standard;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_bnb_static_lib;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
@@ -120,95 +209,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\source\encrypt\_encrypt.h" />
-    <ClInclude Include="..\..\..\source\encrypt\_base64.h" />
-    <ClInclude Include="..\..\..\source\include\bnb_Algorithm.h" />
-    <ClInclude Include="..\..\..\source\include\bnb_BitShift.h" />
-    <ClInclude Include="..\..\..\source\include\bnb_Constant.h" />
-    <ClInclude Include="..\..\..\source\include\bnb_Data.h" />
-    <ClInclude Include="..\..\..\source\include\bnb_Encoder.h" />
-    <ClInclude Include="..\..\..\source\include\bnb_IEEEE754.h" />
-    <ClInclude Include="..\..\..\source\include\bnb_Math.h" />
-    <ClInclude Include="..\..\..\source\include\bnb_Memory.h" />
-    <ClInclude Include="..\..\..\source\include\bnb_StrApi.h" />
-    <ClInclude Include="..\..\..\source\include\bnb_Tchar.h" />
-    <ClInclude Include="..\..\..\source\standard\_bitshift.h" />
-    <ClInclude Include="..\..\..\source\standard\_constant.h" />
-    <ClInclude Include="..\..\..\source\standard\_data.h" />
-    <ClInclude Include="..\..\..\source\standard\_ieee_754.h" />
-    <ClInclude Include="..\..\..\source\standard\_math.h" />
-    <ClInclude Include="..\..\..\source\standard\_memory.h" />
-    <ClInclude Include="..\..\..\source\standard\_numeral.h" />
-    <ClInclude Include="..\..\..\source\standard\_path.h" />
-    <ClInclude Include="..\..\..\source\standard\_point.h" />
-    <ClInclude Include="..\..\..\source\standard\_rectangle.h" />
-    <ClInclude Include="..\..\..\source\standard\_repeat_buffer.h" />
-    <ClInclude Include="..\..\..\source\standard\_string.h" />
-    <ClInclude Include="..\..\..\source\standard\_tchar.h" />
-    <ClInclude Include="..\..\..\source\standard\_variant.h" />
-    <ClInclude Include="..\..\..\source\template\_algorithm.h" />
-    <ClInclude Include="..\..\..\source\template\_array.h" />
-    <ClInclude Include="..\..\..\source\template\_iterator.h" />
-    <ClInclude Include="..\..\..\source\template\_list.h" />
-    <ClInclude Include="..\..\..\source\template\_map.h" />
-    <ClInclude Include="..\..\..\source\template\_pair.h" />
-    <ClInclude Include="..\..\..\source\template\_queue.h" />
-    <ClInclude Include="..\..\..\source\template\_set.h" />
-    <ClInclude Include="..\..\..\source\template\_smart_buf.h" />
-    <ClInclude Include="..\..\..\source\template\_stack.h" />
-    <ClInclude Include="..\..\..\source\template\_string.h" />
-    <ClInclude Include="..\..\..\source\template\_template.h" />
-    <ClInclude Include="..\..\..\source\template\_trait_char.h" />
-    <ClInclude Include="..\..\..\source\template\_tree.h" />
-    <ClInclude Include="..\..\..\source\template\_type_traits.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\source\encrypt\_base64.cpp" />
-    <ClCompile Include="..\..\..\source\encrypt\_rc4.cpp" />
-    <ClCompile Include="..\..\..\source\encrypt\_message_digest.cpp" />
-    <ClCompile Include="..\..\..\source\standard\_abs.cpp" />
-    <ClCompile Include="..\..\..\source\standard\_arcsine.cpp" />
-    <ClCompile Include="..\..\..\source\standard\_arctangent.cpp" />
-    <ClCompile Include="..\..\..\source\standard\_exp.cpp" />
-    <ClCompile Include="..\..\..\source\standard\_extract.cpp" />
-    <ClCompile Include="..\..\..\source\standard\_frexp.cpp" />
-    <ClCompile Include="..\..\..\source\standard\_gcd.cpp" />
-    <ClCompile Include="..\..\..\source\standard\_hypot.cpp" />
-    <ClCompile Include="..\..\..\source\standard\_intercept.cpp" />
-    <ClCompile Include="..\..\..\source\standard\_ldexp.cpp" />
-    <ClCompile Include="..\..\..\source\standard\_log.cpp" />
-    <ClCompile Include="..\..\..\source\standard\_memory.cpp" />
-    <ClCompile Include="..\..\..\source\standard\_mod.cpp" />
-    <ClCompile Include="..\..\..\source\standard\_power.cpp" />
-    <ClCompile Include="..\..\..\source\standard\_setsign.cpp" />
-    <ClCompile Include="..\..\..\source\standard\_sine.cpp" />
-    <ClCompile Include="..\..\..\source\standard\_sqrt.cpp" />
-    <ClCompile Include="..\..\..\source\standard\_tangent.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\source\encrypt\_md5.inl" />
-    <None Include="..\..\..\source\encrypt\_sha256.inl" />
-    <None Include="..\..\..\source\standard\_str_case.cpp" />
-    <None Include="..\..\..\source\standard\_str_cmp.cpp" />
-    <None Include="..\..\..\source\standard\_str_spn.cpp" />
-    <None Include="..\..\..\source\standard\_tstr_cat.inl" />
-    <None Include="..\..\..\source\standard\_tstr_cpy.inl" />
-    <None Include="..\..\..\source\standard\_tstr_find.inl" />
-    <None Include="..\..\..\source\standard\_tstr_len.inl" />
-    <None Include="..\..\..\source\standard\_tstr_reverse.inl" />
-    <None Include="..\..\..\source\standard\_tstr_set.inl" />
-    <None Include="..\..\..\source\standard\_wstr_case.cpp" />
-    <None Include="..\..\..\source\standard\_wstr_cmp.cpp" />
-    <None Include="..\..\..\source\standard\_wstr_spn.cpp" />
-    <None Include="..\..\..\source\template\_find.inl" />
-    <None Include="..\..\..\source\template\_permutation.inl" />
-    <None Include="..\..\..\source\template\_remove.inl" />
-    <None Include="..\..\..\source\template\_replace.inl" />
-    <None Include="..\..\..\source\template\_reverse.inl" />
-    <None Include="..\..\..\source\template\_sort.inl" />
-    <None Include="..\..\..\source\template\_swap.inl" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -1,7 +1,7 @@
 #ifndef ____bnb_Point_H_
 #define ____bnb_Point_H_
 
-#include "../standard/_math.h"
+#include "utility/_math.h"
 
 namespace bnb
 {

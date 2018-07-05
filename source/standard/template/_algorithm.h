@@ -1,8 +1,8 @@
 #ifndef ____bnb_Algorithm_H_
 #define ____bnb_Algorithm_H_
 
-#include "../template/_template.h"
-#include "../template/_type_traits.h"
+#include "template/_template.h"
+#include "template/_type_traits.h"
 
 namespace bnb
 {
@@ -28,25 +28,25 @@ namespace bnb
     }
 
     // 查找
-#include "../template/_find.inl"
+#include "template/_find.inl"
 
     // 交换
-#include "../template/_swap.inl"
+#include "template/_swap.inl"
 
     // 删除
-#include "../template/_remove.inl"
+#include "template/_remove.inl"
 
     // 替换
-#include "../template/_replace.inl"
+#include "template/_replace.inl"
 
     // 反转
-#include "../template/_reverse.inl"
+#include "template/_reverse.inl"
 
     // 排序
-#include "../template/_sort.inl"
+#include "template/_sort.inl"
 
     // 排列-组合
-#include "../template/_permutation.inl"
+#include "template/_permutation.inl"
 
     // 插入
     // 复制
